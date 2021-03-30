@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  SERVER_URL: 'https://quickdraw.autonise.com/api'
+  SERVER_URL: 'https://kunal.autonise.com/api'
 };
