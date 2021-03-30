@@ -1,0 +1,160 @@
+canvas {
+    border: 1px solid #000;
+}
+
+.canvas {
+    width: 100%;
+    height: 550px;
+    border: solid 20px #e4b393;
+    background-color: #ffffff;
+}
+.Back {
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.44;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+.Steps-to-play {
+    background-color: #451c94;
+    font-family: 'Rubik', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.83;
+    letter-spacing: normal;
+    color: #ffffff;
+    text-align: center;
+}
+.Choose-one-of-the-La {
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+.Draw-Inside-this-Can {
+    font-family: 'Rubik', sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.22;
+    letter-spacing: normal;
+    text-align: center;
+    color: #1b0448;
+}
+.Choose {
+    background-color: #451c94;
+    font-family: 'Rubik', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.83;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+}
+.Sun {
+    border: solid 1px #b0dc01;
+    background-color: #1b0448;
+    font-size: 22px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: 0.15px;
+    text-align: center;
+    color: #b0dc01;
+}
+.Sun:hover {
+    border: solid 1px #b0dc01;
+    background-color: #b0dc01;
+    font-size: 22px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: 0.15px;
+    text-align: center;
+    color: #000000;
+    cursor: pointer;
+}
+.fixed{
+    border: solid 1px #b0dc01;
+    background-color: #b0dc01;
+    font-size: 22px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: 0.15px;
+    text-align: center;
+    color: #000000;
+    cursor: pointer;
+}
+.Confirm-Selection {
+    border-radius: 24px;
+    background-color: #b0dc01;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Rubik', sans-serif;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.8;
+    letter-spacing: 0.17px;
+    text-align: center;
+    color: #250f51;
+}
+.Confirm-Selection:hover {
+    border-radius: 24px;
+    background-color: #e84646;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Rubik', sans-serif;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.8;
+    letter-spacing: 0.17px;
+    text-align: center;
+    color: #ffffff;
+    cursor: pointer;
+}
+.Clear {
+    border-radius: 24px;
+    background-color: #e84646;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Rubik', sans-serif;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.8;
+    letter-spacing: 0.17px;
+    text-align: center;
+    color: #ffffff;
+}
+.Clear:hover {
+    cursor: pointer;
+    border-radius: 24px;
+    background-color: #b0dc01;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Rubik', sans-serif;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.8;
+    letter-spacing: 0.17px;
+    text-align: center;
+    color: #250f51;
+}

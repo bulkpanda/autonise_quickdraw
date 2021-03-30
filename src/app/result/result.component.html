@@ -1,0 +1,25 @@
+<div class="container-fluid px-3 pt-5 mt-5">
+  <div class="row">
+    <div class="col-lg-3 pl-4">
+      <p class="Back"><span style="text-decoration: none; color: white; cursor: pointer;" routerLink="/home"><img src="/assets/back.svg" style="margin-right: 10px;">Back</span></p>
+      <p class="Steps-to-play py-3">Steps to play</p>
+      <p class="Choose-one-of-the-La py-1"><img src="/assets/send.svg" style="margin-right: 10px;">Draw one of the category inside the given Canvas area.</p>
+      <p class="Choose-one-of-the-La py-1"><img src="/assets/send.svg" style="margin-right: 10px;">Press ‘Confirm Selection’.</p>
+      <p class="Choose-one-of-the-La py-1"><img src="/assets/send.svg" style="margin-right: 10px;">If you make a mistake in while drawing, press ‘Clear Selection’.</p>
+    </div>
+    <div class="col-lg-6 canvas text-center">
+      <p class="Draw-Inside-this-Can pt-3">Draw inside this Canvas</p>
+      <canvas #canvas></canvas>
+    </div>
+    <div class="col-lg-3">
+      <p class="Choose py-3">Choose from the Categories</p>
+      <div class="row">
+        <div class="col-md-6" *ngFor="let obj of objects">
+          <p class="Sun py-2">{{obj.objectName}}</p>
+        </div>
+      </div>
+      <p class="Confirm-Selection mt-3 py-3" (click)='saveImage()'>Confirm Selection</p>
+      <p class="Clear py-3" (click)='clearCanvas()'>Clear Drawing</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+canvas {
+    border-style: solid;
+    background-color: white;
+}
+
+body {
+    padding: 0px;
+    background: url('/assets/background.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-color: #1b0448;
+}
+
+.header {
+    font-size: 80px;
+}
+
+.qwig {
+    font-family: 'Qwigley', cursive;
+}
+
+.montez {
+    font-family: 'Montez', cursive;
+}
+
+.sub-header {
+    font-size: 40px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.sub-header-5 {
+    font-size: 20px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.card {
+    background-color: greenyellow;
+}
