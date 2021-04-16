@@ -114,8 +114,10 @@ export class ResultComponent implements OnInit {
   private drawOnCanvas(prevPos: { x: number, y: number }, currentPos: { x: number, y: number }) {
     if (!this.ctx) {
       return; }
-
-    this.pathHistory.push([prevPos, currentPos]);
+      var t=[];
+      t.push(prevPos.x);
+      t.push(prevPos.y)
+      this.pathHistory.push(t);
     this.ctx.beginPath();
     if (prevPos) {
       this.ctx.moveTo(prevPos.x, prevPos.y); // from
@@ -134,7 +136,7 @@ export class ResultComponent implements OnInit {
     var date = Date.now();
     var filename  = date + '.png';
     var image = canvas.toDataURL("image/png");
-    this.http.post(environment.SERVER_URL+'/play', {filename, image}, {responseType: 'text'}).subscribe((res: any) => {
+    this.http.post(environment.SERVER_URL+'/play', {filename, image, path: this.pathHistory}, {responseType: 'text'}).subscribe((res: any) => {
       this.output = res;
       const modalRef = this.modalService.open(ModalComponent, { centered: true });
       modalRef.componentInstance.name = this.output;
