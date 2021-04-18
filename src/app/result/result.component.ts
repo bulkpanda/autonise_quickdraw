@@ -140,6 +140,8 @@ export class ResultComponent implements OnInit {
       this.output = res;
       const modalRef = this.modalService.open(ModalComponent, { centered: true });
       modalRef.componentInstance.name = this.output;
+      modalRef.componentInstance.image=image;
+      modalRef.componentInstance.pathHistory=this.pathHistory;
     })
   }
 

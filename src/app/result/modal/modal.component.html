@@ -1,7 +1,46 @@
 <div class="container">
     <div class="row">
         <div class="col text-center p-3">
-            <p style="font-size: 24px">You have drawn a {{name}}</p>
+            <div *ngIf='displayclass'>
+                <p style="font-size: 24px">You have drawn a {{name}}</p>
+            </div>
+            <div *ngIf='ask_user'>
+                <p style="font-size: 24px">Am I right?</p>
+                <div class="row">
+                    <div class="col text-center p-3">
+                        <button class="Confirm-Selection py-1" style=" width: 50%" (click)= 'Yes()'>
+                            Yes
+                        </button>
+                    </div>
+                    <div class="col text-center p-3">
+                        <button class="Clear py-1" style=" width: 50%" (click)= 'No()'>
+                            No
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class='row'> 
+                <div *ngIf='!ask_user'>
+                    <div *ngIf='!is_correct'>
+                        <div *ngIf='!show_thanks'>
+                            <p style="font-size: 24px">Please tell the class</p>  
+                            <div class="row">
+                                <div class="col-md-6" *ngFor="let obj of objects">
+                                    <p class="Sun py-2" [ngClass]="{'fixed':className===obj.objectName}" (click)="radioChangeHandler(obj.objectName)">{{obj.objectName}}</p>
+                                </div>
+                            </div>
+                            <p class="Confirm-Selection mt-2 py-2" (click)='radioSelect()'>Confirm Selection</p>
+                        </div>
+                        <div *ngIf='show_thanks'>
+                            <p style="font-size: 24px" class='mt-1'>Thank You!</p> 
+                        </div>
+                    </div>
+                    <div *ngIf='is_correct' style="font-size: 24px">
+                        Great!
+                    </div>
+                </div>
+            </div>
+          
         </div>
     </div>
 </div>

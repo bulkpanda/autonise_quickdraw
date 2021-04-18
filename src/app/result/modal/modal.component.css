@@ -1,0 +1,127 @@
+.Confirm-Selection {
+    border-radius: 24px;
+    background-color: #05ac3d;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Rubik', sans-serif;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.8;
+    letter-spacing: 0.17px;
+    text-align: center;
+    color: #000000;
+}
+.Confirm-Selection:hover {
+    border-radius: 24px;
+    background-color: #03772a;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Rubik', sans-serif;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.8;
+    letter-spacing: 0.17px;
+    text-align: center;
+    color: #ffffff;
+    cursor: pointer;
+}
+.Clear {
+    border-radius: 24px;
+    background-color: #e84646;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Rubik', sans-serif;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.8;
+    letter-spacing: 0.17px;
+    text-align: center;
+    color: #ffffff;
+}
+.Clear:hover {
+    cursor: pointer;
+    border-radius: 24px;
+    background-color: #c93131;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Rubik', sans-serif;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.8;
+    letter-spacing: 0.17px;
+    text-align: center;
+    color: #000000;
+}
+.Play-Game {
+    font-family: Rubik;
+    font-size: 28px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.57;
+    letter-spacing: 0.23px;
+    text-align: center;
+    color: #250f51;
+    border-radius: 88px;
+    background-color: #b0dc01;
+    padding: 15px 90px 15px 90px;
+  }
+
+.Play-Game:hover {
+    border-radius: 88px;
+    border: solid 2px #b0dc01;
+    background-color: #1b0448;
+    font-family: Rubik;
+    font-size: 28px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.57;
+    letter-spacing: 0.23px;
+    text-align: center;
+    color: #b0dc01;
+    cursor: pointer;
+    padding: 15px 90px 15px 90px;
+    text-decoration: none;
+}
+.Sun {
+    border: solid 1px #b0dc01;
+    background-color: #1b0448;
+    font-size: 22px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: 0.15px;
+    text-align: center;
+    color: #b0dc01;
+}
+.Sun:hover {
+    border: solid 1px #b0dc01;
+    background-color: #b0dc01;
+    font-size: 22px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: 0.15px;
+    text-align: center;
+    color: #000000;
+    cursor: pointer;
+}
+.fixed{
+    border: solid 1px #b0dc01;
+    background-color: #b0dc01;
+    font-size: 22px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: 0.15px;
+    text-align: center;
+    color: #000000;
+    cursor: pointer;
+}
