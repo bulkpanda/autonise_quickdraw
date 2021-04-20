@@ -3,6 +3,7 @@ import { fromEvent } from 'rxjs';
 import { switchMap, takeUntil, pairwise } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { ResultComponent } from '../result.component';
 
 @Component({
   selector: 'app-modal',
@@ -12,7 +13,6 @@ import { environment } from 'src/environments/environment';
 export class ModalComponent implements OnInit {
 
   @Input() public name;
-
   constructor(private http: HttpClient){}
 
   ngOnInit(): void {
@@ -82,31 +82,45 @@ export class ModalComponent implements OnInit {
 
   saveImage(){
     if (this.className === null){
-      console.log('Not Updated!')
+      console.log('Not Updated!');
       return;
     }
+    console.log(this.pathHistory.length);
     var date = Date.now();
     // 'Sun' + '_' + '2021-02-07_.........' + '.png' -> 'Sun_2021-02-07_......png'
     var filename  = this.className + '_' + date + '.png';
     this.http.post(
-      environment.SERVER_URL + '/upload_wrongpred',
-      {filename, image:this.image, className: this.className, path: this.pathHistory}, 
+      environment.SERVER_URL + '/upload_pred',
+      {filename, image:this.image, className: this.className, path: this.pathHistory,iscorrect:false}, 
       {responseType: 'text'}
     ).subscribe((res: any) => {
       console.log(res, this.className)
     })
+    console.log(this.pathHistory.length);
   }
 
   Yes()
   {
     this.is_correct=true;
     this.ask_user=false;
-    this.displayclass=false;
+    this.className=this.name;
+    console.log(this.pathHistory.length);
+    var date = Date.now();
+    // 'Sun' + '_' + '2021-02-07_.........' + '.png' -> 'Sun_2021-02-07_......png'
+    var filename  = this.className + '_' + date + '.png';
+    this.http.post(
+      environment.SERVER_URL + '/upload_pred',
+      {filename, image:this.image, className: this.className, path: this.pathHistory, iscorrect:true}, 
+      {responseType: 'text'}
+    ).subscribe((res: any) => {
+      console.log(res, this.className)
+    })
+    console.log(this.pathHistory.length);
+  
   }
   No()
   {
     this.is_correct=false;
     this.ask_user=false;
-    this.displayclass=false;
   }
 }

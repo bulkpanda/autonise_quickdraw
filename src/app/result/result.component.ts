@@ -132,13 +132,20 @@ export class ResultComponent implements OnInit {
     this.output = null;
   }
   saveImage(){
+    const modalRef = this.modalService.open(ModalComponent, { centered: true });
+    if (this.pathHistory.length==0)
+    {
+      console.log('canvas is empty!');
+      modalRef.componentInstance.displayclass=false;
+      return;
+    }
     var canvas: HTMLCanvasElement = this.canvasEl.nativeElement;
     var date = Date.now();
     var filename  = date + '.png';
     var image = canvas.toDataURL("image/png");
     this.http.post(environment.SERVER_URL+'/play', {filename, image, path: this.pathHistory}, {responseType: 'text'}).subscribe((res: any) => {
       this.output = res;
-      const modalRef = this.modalService.open(ModalComponent, { centered: true });
+      
       modalRef.componentInstance.name = this.output;
       modalRef.componentInstance.image=image;
       modalRef.componentInstance.pathHistory=this.pathHistory;
