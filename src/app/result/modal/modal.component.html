@@ -9,28 +9,28 @@
                 </div>
                 <!-- ------------------------------------ -->
                 <!-- if you want to ask user whether answer is correct or not (default=true)-->
-                <div *ngIf='ask_user'>
+                <!-- <div *ngIf='ask_user'>
                     <p style="font-size: 24px">Am I right?</p>
                     <div class="row">
                         <div class="col text-center p-3">
-                            <!-- yes will cause ask_user false -->
+                            yes will cause ask_user false
                             <button class="Confirm-Selection py-1" style=" width: 50%" (click)= 'Yes()'>
                                 Yes
                             </button>
                         </div>
                         <div class="col text-center p-3">
-                            <!-- no will cause ask_user and is_correct false -->
-                            <button class="Clear py-1" style=" width: 50%" (click)= 'No()'>
+                            no will cause ask_user and is_correct false -->
+                            <!-- <button class="Clear py-1" style=" width: 50%" (click)= 'No()'>
                                 No
                             </button>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- ------------------------------------------------------------------ -->
-                <div class='row'> 
-                    <div *ngIf='!is_correct'>
+                <!-- <div class='row'> 
+                    <div *ngIf='!is_correct'> -->
                         <!-- not showing thanks rn -->
-                        <div *ngIf='!show_thanks'>
+                        <!-- <div *ngIf='!show_thanks'>
                             <p style="font-size: 24px">Please tell the class</p>  
                             <div class="row">
                                 <div class="col-md-6" *ngFor="let obj of objects">
@@ -38,13 +38,13 @@
                                 </div>
                             </div>
                             <p class="Confirm-Selection mt-2 py-2" (click)='radioSelect()'>Confirm Selection</p>
-                        </div>
+                        </div> -->
                         <!-- confirm selection cause show_thanks to be true -->
-                        <div *ngIf='show_thanks'>
+                        <!-- <div *ngIf='show_thanks'>
                             <p style="font-size: 24px" class='mt-1'>Thank You!</p> 
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
             <!-- ------------------------------------------------------------ -->
             <!-- If canvas is empty displayclass=false -->

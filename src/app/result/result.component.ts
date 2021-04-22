@@ -144,7 +144,7 @@ export class ResultComponent implements OnInit {
     var filename  = date + '.png';
     var image = canvas.toDataURL("image/png");
     this.http.post(environment.SERVER_URL+'/play', {filename, image, path: this.pathHistory}, {responseType: 'text'}).subscribe((res: any) => {
-      this.output = res;
+    this.output = res;
       
       modalRef.componentInstance.name = this.output;
       modalRef.componentInstance.image=image;
